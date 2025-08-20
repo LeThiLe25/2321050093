@@ -1,0 +1,138 @@
+<!-- ! + tab -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <MARQUEE><img src="../bai 1/anh.jpg" alt=""></MARQUEE>
+        <h1>Bài 3</h1>
+        <!-- danh sách (list) -->
+         <!-- có thứ tự(ol) -->
+          <ol>
+            <li>thức dậy</li>
+            <li>đánh răng</li>
+            <li>ăn sáng</li>
+            <li>đi học</li>
+            <li>giải lao</li>
+          </ol>
+
+          <!-- không có thứ tự(ul) -->
+           <ul>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>JavaSCrip</li>
+            <li>C#</li>
+           </ul>
+
+           <h1>Form</h1>
+           <form>
+            <!-- div là khối -->
+            <div>
+                <b>Họ và tên: </b>
+                <input type="text" name="hoten" placeholder="Nhập tên vào đây">
+            </div>
+             <div>
+                <b>Năm: </b>
+                <!-- readonly là cố định, ko thể sửa -->
+                <input type="text" name="nam" value="2025" readonly>
+            </div>
+             <div>
+                <b> Giới thiệu về bản thân: </b><br>
+                <textarea name="gioithieu">Nhập giới thiệu...</textarea>
+            </div>
+            <br>
+            <div>
+                <b>Số điện thoại: </b><br>
+                <input name="sodienthoai"
+                type="tel"
+                placeholder="Dạng số: 09xxxxxxxx"
+                required pattern="([0]{1}([0,9,3]{1}([0-9]{8})))">
+                <!-- pattern yêu cầu ng dùng bắt buộc nhập đúng định dạng -->
+                 <!-- required bắt buộc nhập toàn bộ input -->
+                  <!-- trong pattern([ ]{gồm bao nhiêu số}) -->
+            </div>
+            <div>
+                <b>Email: </b>
+                <input type="email" name="email" placeholder="Dạng @gamil.com">
+            </div>
+            <!-- radio button cho phép người dùng chọn -->
+             <div>
+                <!-- cùng 1 khối name phải giống nhauu nếu ko sẽ có 2 sự lựa chọn -->
+                 <b> Giới tính</b><br>
+                 <input type="radio" name="gioitinh" valua="nam"> Nam <br>
+                 <input type="radio" name="gioitinh" valua="nu"> Nữ <br>
+                 <input type="radio" name="gioitinh" valua="khongxacdinh"> Không xác định <br>
+             </div>
+             <div>
+                <b> Sở thích</b><br>
+                Game: <input type="checkbox" name="sothich" valua="game"><br>
+                Music:<input type="checkbox" name="sothich" valua="music"><br>
+                Sport:<input type="checkbox" name="sothich" valua="sport"><br>
+             </div>
+             <div>
+                <b>Trình duyệt ưa thích</b><br>
+                <!-- trong phần input phải giống vs id -->
+                <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Internet Explorer"></option>
+                    <option value="Firefox"></option>
+                    <option value="Chrome"></option>
+                    <option value="Opera"></option>
+                </datalist>
+             </div>
+             <br>
+             <div>
+                <select name="browsers">
+                    <option value="Internet Explorer">Internet Explorer</option>
+                    <option value="Firefox">Firefox</option>
+                    <option value="Chrome">Chrome</option>
+                    <option value="Opera">Opera</option>
+                    <option value="Cốc cốc">Cốc cốc</option>
+                </select>
+            </div>
+            <div>
+                0<input type="range" value="20">100
+            </div><br>
+            <div>
+                <b>Tuổi</b><br>
+                <input type="number" name="tuoi" step="1">
+            </div>
+            <div>
+                <b>Ngày sinh</b>
+                <input type="date" name="ngaythangnamsinnh">
+            </div>
+            <div>
+                <b>Chọn màu sắc ưa thích</b>
+                <input type="color" name="" id=""></div>
+            <div>
+                <!-- tải ảnh từ hệ thống -->
+                <b>Chọn ảnh đại diện</b>
+                <input type="file">
+            </div>
+            <div>
+                <b>Mật khẩu</b>
+                <input type="password">
+            </div>
+            <div>
+                <!-- tải lại trang, xóa dữ liệu ms nhập -->
+                <b>Reset</b>
+                <input type="reset">
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+           </form>
+           <!-- iframe giúp nhúng video -->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/AQn8VTHTUmM?si=K4rurgE3odFrrwkH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           <video controls width="560" height="315">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <audio controls>
+                <source src="baihat.mp3" type="audio/mp3">
+            </audio>
+    </body>
+</html>
+
