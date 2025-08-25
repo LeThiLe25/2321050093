@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+    <!-- những cách tạo style -->
+    <!-- bất cứ thẻ h2 nào cuungx đều sẽ có cùng màu -->
+     <!-- c2: -->
+    <style>
+        h2{
+            color: red;
+        }
+        p{
+            color: wheat;
+            background-color: azure;
+        }
+        h3 :hover{
+            cursor: pointer;
+            background-color: black;
+        }
+    </style>
+    <!-- c3: h3-> tạo file css ->thẻ link -->
+    <link rel="stylesheet" href="styke.css" type="text/css">
+</head>
+<body>
+    <!--c1: color: xét màu chữ
+         backgroun-color: xét màu nền-->
+    <!-- inline style là cấp độ ưu tiên lớn nhất -->
+    <h1 style="color: aquamarine;background-color: black;">Inline Style</h1>
+    <h2>internal style</h2>
+    <h2 class="bg">Bài 4
+    </h2>
+     <h3>External Style</h3>
+    <h3 class="bg">External Style</h3>
+    <h3 id="title">Bài CSS</h3>
+    <!-- title là  #
+         class là .-->
+    <!-- nếu có dạng thẻ.tên thì chỉ có nhũng thẻ nối ms đc áp dụng 
+         nếu có định dạng <thẻ> <b/u/i> chỉ những dòng có dạng<b/i/u> bị bọc bởi thẻ đó ms đc áp dụng
+         cx có thể áp dụng vs thẻ <a> vs cách dùng a:tên-->
+    <!-- thẻ div or p or h đều có tính chất display: bolck(chiếm hết 1 dòng) -->
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>
