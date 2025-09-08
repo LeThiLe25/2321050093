@@ -8,7 +8,7 @@ ul{
     background-color:#2fa4e7;
     /* padding: 20px; */
     gap: 20px;
-    /* giống vs padding/margin nhưng chỉ  */
+    /* giống vs padding/margin nhưng chỉ cách các phần tử  */
 }
 .danhmuc-danhsach{
     display: flex;
@@ -20,13 +20,13 @@ ul{
     margin: 10px;
 }
 .danhmuc-lienket{
-    color:gray;
+    color:white;
     text-decoration: none;
      /* text-decoration bỏ gạch chân */
      font-size: larger;
 }
 .danhmuc-lienket:hover{
-    color: white;
+    color:grey;
     /* đổi màu chữ khi trỏ chuột vào */
 }
 .logo{
@@ -34,38 +34,188 @@ ul{
     background-color: grey;
 }
 main{
+    background-color: rgb(220, 215, 215);
     display: flex;
+    gap: 10px;
+
 }
 .noidung-trai{
     width: 80%;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .noidung-phai{
     height: 1000px;
-    background-color: black;
+    background-color:#ddd;
     width: 20%;
+    border-radius: 5px;
 }
 .tieude{
+    margin: 0;
      background-color:#2fa4e7;
     /* padding: 20px; */
-    gap: 20px;
-    /* giống vs padding/margin nhưng chỉ  */
+    padding-left: 20px;
+    /* padding: đẩy chữ vào tg
+       margin: đẩy cả khối vào trong */
     color: white;
-    font-size: x-large;
-    font-weight: bold;
-    border-radius: 10px 10px 0px 0px;
+    font-size:medium;
+    font-weight: normal;
+    /* độ đạm nhạt của chữ */
+    border-radius: 5px 5px 0px 0px;
+    /* bo tròn các góc phần tử */
+}
+.tintuc{
+    background-color: white;
+    border-radius: 5px;
 }
 .tintuc-danhsach{
     display: flex;
     justify-content: space-between;
+    /* quyết định phần trống được phân bổ
+    justify-content: flex-start: (mặc định) các phần tử nằm về bên trái
+                     flex-end: các phần tử nằm về bên phải
+                     center: các phần tử nằm giữa 
+                     space-between: phần tử cách đều nhau
+                     space-around:phần tử cách đều nhau và cách với 2 mép ngoài 1 khoảng nhỏ
+                     space-evenly: ptu cách nhau cùng 2 mép 1 khoảng bằng nhau*/
 }
 .baiviet{
+    /* background-image: url(css.5.png); */
+    background-size: 100%;
     height: 200px;
-    background-color: grey;
+    background-color:#91d2f8;
     width: 32%;
+    margin: 5px;
+    position: relative;
 }
 .ngaythang{
     height: 20px;
-    background-color: #2fa4e7;
+    background-color: #91d2f8;
     text-align: end;
+}
+.bv-noidung{
+    margin-top: -50px;
+    text-align: center;
+    background-color:rgba(145, 208, 211, 0.5);
+    backdrop-filter: blur(5px);
+}
+.thongbao{
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.tb-noidung{
+    display: flex;
+}
+.tb-moinhat{
+    width: 25%;
+    height: auto;
+    margin: 10px;
+}
+.tb-ngaythang{
+    text-align: end;
+    white-space:nowrap;
+    font-size: medium;
+    /* không cho xuống dòng */
+}
+.tb-tieude{
+    color: #2fa4e7;
+    text-decoration: none;
+    /* xóa gạch chân */
+}
+.tb-moi{
+    width: 75%;
+    height: auto;
+    gap: 10px;
+}
+.tb-muc{
+    display: flex;
+    justify-content: space-between;
+    padding:5px 10px;
+    border-left:1px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+.tb-lienket{
+    width: 80%;
+    color: black;
+    text-decoration: none;
+     /* text-decoration bỏ gạch chân */
+    font-size: medium;
+}
+.tb-lienket :hover{
+    color: grey;
+}
+.huongdan{
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0;
+}
+.hd-muc{
+    display: flex;
+    justify-content: space-between;
+    padding:5px 10px;
+}
+.hd-danhsach ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+.hd-ngaythang{
+    text-align: end;
+    white-space:nowrap;
+    font-size: medium;
+    /* không cho xuống dòng */
+}
+.hd-lienket{
+    color: black;
+    text-decoration: none;
+     /* text-decoration bỏ gạch chân */
+    font-size: medium;
+}
+.hd-lienket:hover{
+    color: gray;
+}
+.dangnhap{
+    background-color: white;
+    border-radius: 5px;
+}
+.DN{
+    background-color: white;
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 10px;
+}
+DN input{
+    border: none;   
+    font-size: 10px;
+}
+.icon{
+    border: 1px solid #0e0707;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.quenmk{
+    display: block;
+    color: #2fa4e7;
+    text-align: right;
+    text-decoration: none;
+}
+.nutbam{
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.nb-dn{
+    font-size: large;
+    width: 100%;
+    background-color: #2fa4e7;
+    color: white;
+}
+.nb-microsoft{
+    font-size: large;
+    width: 100%;
+    background-color: rgb(47, 89, 228);
+    color: white;
 }
