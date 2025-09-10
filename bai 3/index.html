@@ -33,15 +33,18 @@
             <div>
                 <b>Họ và tên: </b>
                 <input type="text" name="hoten" placeholder="Nhập tên vào đây">
+                <!-- input thẻ tạo ô cho nhập 1 dòng -->
             </div>
              <div>
                 <b>Năm: </b>
-                <!-- readonly là cố định, ko thể sửa -->
+                <!-- readonly là cố định, ko thể sửa 
+                    disabled :khóa không cho nhập-->
                 <input type="text" name="nam" value="2025" readonly>
             </div>
              <div>
                 <b> Giới thiệu về bản thân: </b><br>
                 <textarea name="gioithieu">Nhập giới thiệu...</textarea>
+                <!-- thẻ tạo ô cho phép nhập nhiều dòng -->
             </div>
             <br>
             <div>
@@ -51,7 +54,7 @@
                 placeholder="Dạng số: 09xxxxxxxx"
                 required pattern="([0]{1}([0,9,3]{1}([0-9]{8})))">
                 <!-- pattern yêu cầu ng dùng bắt buộc nhập đúng định dạng -->
-                 <!-- required bắt buộc nhập toàn bộ input -->
+                 <!-- required bắt buộc nhập vào trc khi gửi from-->
                   <!-- trong pattern([ ]{gồm bao nhiêu số}) -->
             </div>
             <div>

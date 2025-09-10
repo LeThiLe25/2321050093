@@ -45,7 +45,7 @@ main{
 }
 .noidung-phai{
     height: 1000px;
-    background-color:#ddd;
+    background-color: rgb(220, 215, 215);
     width: 20%;
     border-radius: 5px;
 }
@@ -182,7 +182,7 @@ main{
 .DN{
     background-color: white;
     display: flex;
-    border: 1px solid #fff;
+    border: 1px solid #ddd;
     border-radius: 5px;
     margin: 10px;
 }
