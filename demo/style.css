@@ -1,0 +1,22 @@
+.last{
+    display: flex;
+    background-color:#000000 ;
+    width: 70%;
+    margin: 10px 0 0 0;
+}
+.anh{
+    width: 20%;
+}
+li{
+    margin: 10px 0;
+}
+ul{
+    list-style: none ;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.noidung{
+    display: flex;
+}

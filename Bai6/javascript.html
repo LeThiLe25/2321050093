@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <!-- c2 tạo 1 file js rồi liên kết bằng thẻ scipt -->
+    <script src="Scrip.js"></script>
+</head>
+<body>
+    <!-- c1 cho thẳng thẻ SCRIPT vào body -->
+     <script>
+        // in ra màn hình 
+        // xuống dòng có 2 cách:
+        // c1: cho <br> thằng vào trong " "
+        // c2: nối chuỗi: dùng dấu +
+        document.writeln("Hello World!<br>")
+        // khai bóa biến let or var
+        // cú pháp: let tên biến = giá trị
+        // quy tắc đặt tên đầu thường trong hoa
+        let hoTen = "Mami Zân"+"<br>";//phải gọi bằng document.wirteln
+        document.writeln(hoTen+"123"+"<br>")
+        // phép toán
+        let so1 = 10;
+        let so2 = "5";
+        let ketQua = true;
+        // so1%=so2;
+        ketQua = so1 / so2;
+        
+        // phép so sánh
+        // !==  === : so sánh khác nhau về cả giá trị lẫn kiểu dữ liệu
+        // == != < > <= >=:  chỉ so sánh về giá trị 
+        document.writeln((so1 !== so2)+"<br>");
+        // khi giảm 1:++ nếu để trong document thì phải đặt trước kq
+        // document.writeln(++ketQua);
+        // dấu ! có thể phụ định nếu kết quả true
+        document.writeln(!ketQua + "<br>")
+        
+        // các kiểu dữ liệu
+        let thongTinSinhVien = {
+            hoTen: "Mami Zân",
+            mssv: 2321050000,
+            lop: " cntt",
+            gioiTinh: true,
+            tuoi: 20
+        }
+        let diaChiA = {
+            thanhPho: "Bắc Ninh",
+            duong: "ABC",
+            xa:"Giao thủy"
+        }
+        let namNay=2025;
+        thongTinSinhVien.diaChi=diaChiA;
+        document.writeln("Xin chào bạn:" + thongTinSinhVien.hoTen+"<br>"+"Nhà ở: "
+            + thongTinSinhVien.diaChi.xa +" "+thongTinSinhVien.diaChi.thanhPho +"<br>"
+            +"Năm sinh: "
+            +(namNay - thongTinSinhVien.tuoi)
+        )
+
+     </script>
+    
+</body>
+</html>
