@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Đơn Hàng</title>
+</head>
+<body>
+    <script>
+        let thongTinDonHang ={
+            maDonHang : "001CDB",
+            thongTinKhachHang : {
+                hoTen : "Nguyễn Văn A",
+                soDT : "096xxxxxxx",
+                thanhVien: true,
+            },
+            sanPham1 : {
+                maSanPham : "0101",
+                tenSanPham : "Trà sữa",
+                soLuong : 10,
+                giaTien :20000
+            },
+            sanPham2 : {
+                maSanPham : "0102",
+                tenSanPham : "Matcha",
+                soLuong : 3,
+                giaTien :25000
+            },
+            sanPham3 : {
+                maSanPham : "0103",
+                tenSanPham : "Coffee",
+                soLuong : 15,
+                giaTien :10000,
+            },
+            thanhToanThanhCong:true,
+            diaChiGiaoHang : "Đường ABC, phường XYZ, thành phố Bắc Ninh"
+        }
+        let tongTien = thongTinDonHang.sanPham1.giaTien * thongTinDonHang.sanPham1.soLuong;
+        document.writeln("Khách hàng: " + thongTinDonHang.thongTinKhachHang.hoTen
+                        // parseInt/ parseFloat : gán kiểu  dữ liệu -> biến string thành int/ float  
+                        + "<br>"+ "matcha" + parseInt(thongTinDonHang.sanPham3.giaTien)
+                        + "<br>"+"Thành tiền: " + tongTien+" VND" + "<br>");
+        // độ dài chuỗi
+        document.writeln("Độ dài mã đơn hàng" + thongTinDonHang.maDonHang.length);
+        // truy cập vào kí tự
+        document.writeln("<br>"+ "Mã đầu" + thongTinDonHang.maDonHang[4]);
+        // cắt đoạn con trong chuỗi
+        document.writeln("<br>"+thongTinDonHang.maDonHang.slice(1,4));
+        //replace cho phép thay thế phần chuỗi
+        document.writeln(thongTinDonHang.maDonHang.replaceAll("0","5"));
+        // viết thường toàn bộ
+        document.writeln(thongTinDonHang.maDonHang.toLowerCase());
+        //trả ra vị trí xuất hiện đầu tiên của 1 ký tự trong chuỗi
+        document.writeln(thongTinDonHang.maDonHang.indexOf(0));
+        //tách chuỗi thành mảng
+        document.writeln(thongTinDonHang.maDonHang.split(''));
+        // 
+        let danhsach = ["a","b","c"];
+        document.writeln(danhsach[0].startsWith("a")+"<br>");
+        // chuyển chuỗi về số
+        let so = "10";
+        document.writeln(typeof(so)+"<br>");
+        document.writeln(typeof(Number(so))+"<br>");
+        // toFixed định dạng số với số chữ số thập phân nhất định
+        var pi = 3.14159;
+        document.writeln(pi.toFixed(2)+"<br>");
+        // isNaN: ktra xem giá trị có phải là "not a number"
+        // isFinite(): kta có phải số hữu hạn hay ko
+
+        // date: là đối tượng tích hợp javascript 
+        let today = new Date('2025-9-23');
+        document.writeln("<br>"+today);
+    </script>
+</body>
+</html>
