@@ -43,10 +43,10 @@
         // độ dài chuỗi
         document.writeln("Độ dài mã đơn hàng" + thongTinDonHang.maDonHang.length);
         // truy cập vào kí tự
-        document.writeln("<br>"+ "Mã đầu" + thongTinDonHang.maDonHang[4]);
+        document.writeln("<br>"+ "Mã thứ:" + thongTinDonHang.maDonHang[4]);
         // cắt đoạn con trong chuỗi
         document.writeln("<br>"+thongTinDonHang.maDonHang.slice(1,4));
-        //replace cho phép thay thế phần chuỗi
+        //replace cho phép thay thế 1 phần trong chuỗi
         document.writeln(thongTinDonHang.maDonHang.replaceAll("0","5"));
         // viết thường toàn bộ
         document.writeln(thongTinDonHang.maDonHang.toLowerCase());
@@ -68,8 +68,9 @@
         // isFinite(): kta có phải số hữu hạn hay ko
 
         // date: là đối tượng tích hợp javascript 
-        let today = new Date('2025-9-23');
+        let today = new Date();
         document.writeln("<br>"+today);
+        // document.writeln("<br>"+today-1);
     </script>
 </body>
 </html>

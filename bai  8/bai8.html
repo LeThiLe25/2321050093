@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // if - else
+    let toDay = new Date();
+    if(toDay.getHours()<10){
+        document.writeln("Chào buổi sáng");
+    }
+    else if(10<=toDay.getHours()<=12){
+        document.writeln("Mặt trời đốt mông rồi!!!")
+    }
+    else if(12<toDay.getHours()<=17){
+        document.writeln("Woa! Ngủ hơn lợn!")
+    }
+    else if(17<toDay.getHours()<=22){
+        document.writeln("...M không đói à?")
+    }
+    else{
+        document.writeln("Cứu!!! Cứu người!!!!")
+    }
+    // mảng
+    let arr=[9,2,5,7,3,'a','b','c'];
+    let i = "abc";
+    // ktra tên biến có phải mảng hay ko
+    document.writeln("<br>"+Array.isArray(i)+"<br>");
+    document.writeln(arr+"<br>");
+    document.writeln(arr.length+"<br>");
+
+    // đọc một phần tử trong mảng
+    document.writeln(arr[3]+"<br>");
+
+    //trả ra vị trí đầu tiên xuất hiện phần tử
+    document.writeln(arr.indexOf(3)+"<br>");
+    // trả ra vị trí cuối cùng xuất hiện phần tử
+    document.writeln(arr.lastIndexOf(5)+"<br>");
+
+    // concat giúp nối các mảng, chuỗi vào vs mảng đc chọn thành 1 mảng
+    let a,b,c,d;
+    a=[1,2,3];
+    b="JavaScript";
+    c=[42,"VBScript"];
+    d=a.concat(b,c);
+    // thay 4 vào vị trí 3
+    d[3]=4;
+    document.writeln(d+"<br>");
+    // join đổi 1 mảng thành 1 chuỗi string
+    document.writeln(d.join("")+"<br>");
+    document.writeln(Array.isArray(i)+"<br>");
+    // pop lấy ra phần tử 
+    e=d.pop();
+    document.writeln(d+"<br>");
+    // push thêm phần tử vào trong mảng cuối cùng
+    d.push("Vân");
+    document.writeln(d+"<br>");
+    // đảo các vị trí trong mảng
+    document.writeln(d.reverse()+"<br>");
+    // shift xóa phần tử đầu tiên
+    // unshift thêm phần tử vào đầu mảng: arr. unshift (0)
+    let so="1000000000000000004";
+    let soCuoiCung = parseInt(so[so.length - 1]);
+    if(soCuoiCung%2==0){
+        document.writeln("Số chẵn");
+    }
+    else{document.writeln("Số lẻ")}
+    </script>
+
+</body>
+</html>
