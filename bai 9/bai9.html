@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9</title>
+</head>
+<body>
+    <script>
+        // alert("chào mừng!");
+        // trả ra 1 dữ liệu nào đấy nếu ok thì vào trang web nếu ko thì thoát
+        // let result = confirm("press a button");
+        // if (result == true){
+        //     document.writeln("press ok!"+"<br>");
+        // }
+        // else{document.writeln("press Cancel!"+"<br>");}
+       
+        
+        // function + tên hàm +(){
+        //     code
+        // }
+        // phỉa gọi hàm ms hiện
+        // function sayHello(){
+        //     document.writeln("Hello"+"<br>");
+        // }
+        // sayHello();
+        // // function tạo hàm
+        // function sayHello2(name,age){
+        //     document.writeln("Hello " + name + " "+age+" tuổi");
+        // }
+        // sayHello2("Vân",20);
+        // let nameP= prompt ("tên ","Điền tên");
+        // let tuoiP = prompt("Tuổi","Điền tuổi")
+        // sayHello2(nameP,tuoiP);
+
+        let so = prompt("Nhập số: ");
+        let soNguyen = parseInt(so);
+        function ktraChanle(soNguyen){
+            if(soNguyen%2==0){
+                document.writeln("Số chẵn");
+            }
+            else{document.writeln("Số lẻ")}
+        }
+        
+        // isNaN ktra xem có phải số nguyên hay ko
+        if(!isNaN(soNguyen)){
+            alert(ktraChanle(soNguyen));
+        }
+        else{
+            document.writeln("chắc xưa m hay viết số bằng chữ");
+        }
+    </script>
+</body>
+</html>
