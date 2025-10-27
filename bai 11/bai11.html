@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11</title>
+        <style>
+        .anh{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        button{
+            background-color: black; color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Ví dụ</h2>
+        <div class="anh">
+            <img src="download (2).jpg" alt="" width="200px">
+        </div>
+        <h2 >chế độ : Sáng </h2>
+        <div style="text-align: center;">
+            <button onclick="doiCheDo()" >
+                Đổi chế độ
+            </button>
+        </div>
+    </div>
+    <script>
+        let cheDo = true
+        function doiCheDo(){
+            if(cheDo==true){
+                document.getElementsByTagName('body')[0].style ='background-color: black';
+                document.getElementsByTagName('h2')[1].innerHTML = 'Chế độ : Tối';
+                document.getElementsByTagName('h2')[1].style = 'color : white';
+                document.getElementsByTagName('h2')[0].style = 'color : white';
+                document.getElementsByTagName('img')[0].src="download (1).jpg";
+                document.getElementsByTagName('button')[0].style= 'background-color : while , color : back';
+                cheDo=false;}
+            else{
+                document.getElementsByTagName('body')[0].style ='background-color: white';
+                document.getElementsByTagName('h2')[1].innerHTML = 'Chế độ : Sáng';
+                document.getElementsByTagName('h2')[1].style = 'color : black';
+                document.getElementsByTagName('h2')[0].style = 'color : black';
+                document.getElementsByTagName('img')[0].src="images.png";
+                cheDo=true;
+            }
+        }
+    </script>
+    
+</body>
+</html>

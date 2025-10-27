@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Tính điểm</title>
+<script>
+function tinhDiem() {
+    // Lấy giá trị điểm
+    let a = parseFloat(document.getElementById("diemA").value);
+    let b = parseFloat(document.getElementById("diemB").value);
+    let c = parseFloat(document.getElementById("diemC").value);
+
+    // Kiểm tra hợp lệ
+    if (isNaN(a) || isNaN(b) || isNaN(c) || a < 0 || b < 0 || c < 0 || a > 10 || b > 10 || c > 10) {
+        alert("Vui lòng nhập điểm hợp lệ (0 - 10)");
+        return;
+    }
+
+    // Tính điểm trung bình
+    let tong = a * 0.6 + b * 0.3 + c * 0.1;
+
+    // Lấy lựa chọn hiển thị
+    let loai = document.querySelector('input[name="hienthi"]:checked').value;
+
+    // Nếu chọn điểm số
+    if (loai === "so") {
+        document.getElementById("ketqua").value = tong.toFixed(2);
+    } 
+    // Nếu chọn điểm chữ
+    else {
+        let diemChu = "";
+        if (tong >= 8.5) diemChu = "Giỏi";
+        else if (tong >= 7) diemChu = "Khá";
+        else if (tong >= 5) diemChu = "Trung bình";
+        else diemChu = "Yếu";
+        document.getElementById("ketqua").value = diemChu;
+    }
+}
+</script>
+</head>
+<body>
+<h2>Tính điểm</h2>
+<label>Điểm A: </label><input type="text" id="diemA" placeholder="Nhập điểm"><br><br>
+<label>Điểm B: </label><input type="text" id="diemB" placeholder="Nhập điểm"><br><br>
+<label>Điểm C: </label><input type="text" id="diemC" placeholder="Nhập điểm"><br><br>
+
+<!-- Thêm phần lựa chọn hiển thị -->
+Hiển thị kết quả:
+<label><input type="radio" name="hienthi" value="so" checked> Điểm số</label>
+<!-- checked chọn mặc định là điểm số-->
+<label><input type="radio" name="hienthi" value="chu"> Điểm chữ</label>
+<br><br>
+
+<button onclick="tinhDiem()">Tính điểm</button>
+<br><br>
+<label>Kết quả: </label><input type="text" id="ketqua" readonly>
+</body>
+</html>

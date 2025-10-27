@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bài 10</h1>
+    <h2>tính điểm</h2>
+    <div>Điểm A <input type="number" id="diemA" placeholder="Nhập điểm A"></div>
+    <div>Điểm B <input type="number" id="diemB" placeholder="Nhập điểm B"></div>
+    <div>Điểm C <input type="number" id="diemC" placeholder="Nhập điểm C"></div>
+    <div><button onclick="xemKetQua()">Tính điểm</button></div>
+    <div><input type="text" id="xemKetQua"></div>
+    <script>
+        function xemKetQua(){
+            let diemA= parseFloat(document.getElementById('diemA').value);
+            let diemB= parseFloat(document.getElementById('diemB').value);
+            let diemC= parseFloat(document.getElementById('diemC').value);
+            // document.writeln(tinhDiem(diemA,diemB,diemC));
+            let sum =tinhDiem(diemA,diemB,diemC);
+            document.getElementById("xemKetQua").value=sum.toFixed(2);
+        }
+
+        
+
+        function tinhDiem(a,b,c){
+            let tong;
+            if( ktra(a,b,c)==true){
+                tong=a*0.6+b*0.3+c*0.1;
+                return tong;
+            }
+            else if(tong>9){
+                document.writeln("Điểm chữ: A+")
+            }
+            else if(8<tong<9){
+                document.writeln("Điểm chữ: A")
+            }
+            else if(7<tong<8){
+                document.writeln("Điểm chữ: B+")
+            }
+            else if(6.5<tong<7){
+                document.writeln("Điểm chữ: B")
+            }
+            else if(5<tong<6.5){
+                document.writeln("Điểm chữ: C+")
+            }
+            else if(4<tong<5){
+                document.writeln("Điểm chữ: C")
+            }
+        }
+
+        
+        function ktra (a,b,c){
+        let ketQua = true;
+        if (a<0||a>10 || typeof(a)!='number'){
+            document.writeln("Điểm A không hợp lệ" + "<br>");
+            ketQua = false;
+        }
+        if (b<0||b>10 || typeof( b)!='number'){
+            document.writeln("Điểm B không hợp lệ" + "<br>");
+            ketQua = false;
+        }
+        if (c<0||c>10 || typeof(c)!='number'){
+            document.writeln("Điểm C không hợp lệ" + "<br>");
+            ketQua = false;
+        }
+        return ketQua;
+        // let diemSo = tinhDiem(a,b,c);
+        }
+        
+        // let a=10;
+        // let b = 9;
+        // let c = 10;
+        // tinhDiem(a,b,c);
+    </script>
+</body>
+</html>
